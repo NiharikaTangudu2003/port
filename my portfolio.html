@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/e3c95a4e95.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <h2 class="logo">Portfo<span>lio.</span></h2>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Student</p>
+                    <h1>Hi, I'm <spam style="color:#f9004d">Niharika</spam><br> from Srikakulam</h1>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="niha.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hi myself Niharika, a student currently pursuing studies at AITAM.
+                             With a keen interest in coding, I dive into the world of programming, exploring algorithms and problem-solving techniques.
+                             Alongside the digital realm, Balancing academic pursuits with a passion for technology 
+                             I strive for continuous learning and growth, harnessing the power of coding and gaming to fuel curiosity and drive.</p>
+                             <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('Certificates')">Certificates</p>
+                                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                             </div>
+                             <div class="tab-contents active-tab" id="Skills">
+                                <ul>
+                                    <li><span>Python</span></li>
+                                    <li><span>C&C++</span></li>
+                                    <li><span>HTML,CSS,JS</span></li>
+                                </ul>
+                             </div>
+                             <div class="tab-contents" id="Certificates">
+                                <ul>
+                                    <li><span>Infosys Spring Board (Python & C)</span><br>Successfully completed the Infosys Spring Board program, acquiring in-depth knowledge of Python and C programming languages.</li>
+                                    <li><span>Data Analysis using Python by APSSDC</span><br>Completed a comprehensive course on Data Analysis using Python, gaining expertise in data manipulation, visualization, and analysis.</li>
+                                    <li><span>Web Development using DJANGO</span><br>I Completed a specialized course in Web Development using Django, a high-level Python web framework</li>
+                                </ul>
+                             </div>
+                             <div class="tab-contents" id="Education">
+                                <ul>
+                                    <li><span>Current</span><br>IT 3rd year in AITAM </li>
+                                    <li><span>2020</span><br>Intermediate in Sri Chaitanya College</li>
+                                    <li><span>2016</span><br>Sri Chaitanya school</li>
+                                </ul>
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+       
+    
+        <div id="contact">
+            <div class="container">
+               <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>niharikatangudu1@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i>8500313425</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/niharika.338?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                          <a href="https://instagram.com/mr_magnificent14?igshid=ZDc4ODBmNjlmNQ=="><i class="fa-brands fa-instagram"></i></a>
+                          <a href="https://twitter.com/magnificentniha?t=M42ikQ4tqghxKCp0_Nyj-A&s=09"><i class="fa-brands fa-twitter"></i></a>
+                          <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form  action="https://api.web3forms.com/submit" method="POST" align="center" border="0" cellspacing="600" > 
+                        <div>
+                                <input type="hidden" name="access_key" value="951c6e97-f31b-4536-8fb5-1ef6cf1eb75f"> 
+                        <input type="text" name="Name" placeholder="Your Name" required>    
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                </div>
+               </div>     
+            </div>
+            <div class="copyright">
+                <p>copyright &copy;.Made by niharika with <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+    </body>
